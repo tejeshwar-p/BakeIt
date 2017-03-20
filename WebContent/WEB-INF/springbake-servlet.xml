@@ -17,6 +17,14 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 	
-	<bean id="homeController" class="org.bakeitstore.controllers.HomeController"></bean>
+	<bean id="homeController" class="com.bakeitstore.controllers.HomeController">
+		<property name="itemDetailsService" ref="itemDetailsServiceRef"></property>
+	</bean>
+	
+	<bean id="itemDetailsServiceRef" class="com.bakeitstore.items.service.ItemDetailsService">
+		<property name="itemDetailsDAO" ref="itemDetailsDAORef"></property>
+	</bean>
+	
+	<bean id="itemDetailsDAORef" class="com.bakeitstore.dao.ItemDetailsDAO"></bean>
 
 </beans>

@@ -5,8 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Bake It Web Store</title>
+<script type="text/javascript" src="/resources/js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="/resources/js/common.js"></script>
+<script ></script>
 </head>
 <body>
 	${welcomeMessage}
+	<br>
+	<p>Click the below button to load create an ajax request and load the values from a JSON file</p>
+    <br>
+    <button id="clickMe" type="button">Click Me!</button>
+    <br>
+    <div id="tableDiv">
+    </div>
 </body>
 </html>
