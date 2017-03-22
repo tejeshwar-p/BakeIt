@@ -70,7 +70,7 @@ public class Cake implements IBakeryItem{
 		this.cakeType = cakeType;
 	}
 
-	public Boolean isCakeAvailability() {
+	public Boolean getCakeAvailability() {
 		return cakeAvailability;
 	}
 

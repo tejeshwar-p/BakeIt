@@ -25,6 +25,9 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 		<property name="itemDetailsDAO" ref="itemDetailsDAORef"></property>
 	</bean>
 	
-	<bean id="itemDetailsDAORef" class="com.bakeitstore.dao.ItemDetailsDAO"></bean>
+	<bean id="itemDetailsDAORef" class="com.bakeitstore.dao.ItemDetailsDAO">
+	</bean>
+	
+	<mvc:resources location="/resources/" mapping="/resources/**"/>
 
 </beans>

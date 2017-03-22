@@ -8,16 +8,16 @@ import com.bakeitstore.items.entity.Cake;
 
 public class ItemDetailsDAO implements IBaseDAO{
 	
-	List cakesList;
-	List vegCakesList;
-	List nonVegCakesList;
+	List<Cake> cakesList;
+	List<Cake> vegCakesList;
+	List<Cake> nonVegCakesList;
 	
-	public List getAllCakes(){
+	public List<Cake> getAllCakes(){
 		//TODO - get all the cakes - combine veg cakes and non veg cakes lists
 		//TODO - for the time being create a dummy cakes
 		// and send.
 		//TODO - fetch the data from db after tables are created.
-		cakesList = new ArrayList();;
+		cakesList = new ArrayList<>();;
 		Cake chocolateCake = new Cake(new Integer(1), "Chocolate Cake",
 				"Chocolate", new Double(1.0), "Square", "Vegetarian",
 				Boolean.TRUE);
@@ -45,12 +45,24 @@ public class ItemDetailsDAO implements IBaseDAO{
 		return cakesList;
 	}
 	
-	public List getVegCakesList(){
+	public void setCakesList(List<Cake> cakesList) {
+		this.cakesList = cakesList;
+	}
+
+	public void setVegCakesList(List<Cake> vegCakesList) {
+		this.vegCakesList = vegCakesList;
+	}
+
+	public void setNonVegCakesList(List<Cake> nonVegCakesList) {
+		this.nonVegCakesList = nonVegCakesList;
+	}
+
+	public List<Cake> getVegCakesList(){
 		//TODO - get veg cakes
 		return null;
 	}
 	
-	public List getNonVegCakesList(){
+	public List<Cake> getNonVegCakesList(){
 		//TODO - get non veg cakes
 		return null;
 	}
